@@ -40,5 +40,7 @@ Use the instance to send data:
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
+[Pull requests][pr] welcome.
 
-[tracker]: http://example.com/issues/replaceme
+[tracker]: https://github.com/filiph/gtag_analytics/issues
+[pr]: https://github.com/filiph/gtag_analytics/pulls
