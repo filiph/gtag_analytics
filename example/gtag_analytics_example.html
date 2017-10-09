@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics</title>
+
+  <!--&lt;!&ndash; Global Site Tag (gtag.js) - Google Analytics &ndash;&gt;-->
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-495778-10"></script>-->
+  <!--<script>-->
+    <!--window.dataLayer = window.dataLayer || [];-->
+    <!--function gtag(){dataLayer.push(arguments);}-->
+    <!--gtag('js', new Date());-->
+
+    <!--gtag('config', 'UA-495778-10');-->
+  <!--</script>-->
+</head>
+<body>
+  <h1>Google Analytics example</h1>
+
+  <p>Just an example with a <a href="https://filiph.net/">link</a>.</p>
+
+  <script async>
+    function gtag(type, content, options) {
+      console.log("Type: " + type);
+      console.log("Content: " + content);
+      console.log("Options: " + JSON.stringify(options));
+    }
+  </script>
+  <script async src="gtag_analytics_example.dart.js"></script>
+</body>
+</html>
