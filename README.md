@@ -37,6 +37,15 @@ Use the instance to send data:
 
 [gtag]: https://support.google.com/analytics/answer/7476135
 
+## Testing
+
+Most of the functionality lives in the Google Analytics JavaScript code,
+but there are some tests that cover the wrapper. They will only work
+in a browser, so you'll have to run them with the `-p` option, like
+this:
+
+    pub run test -p chrome
+
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
