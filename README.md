@@ -24,11 +24,6 @@ Create an instance of the `GoogleAnalytics` class:
     
     final ga = new GoogleAnalytics();
 
-Or, if you want to ignore errors (to ensure that your tracking code doesn't 
-bring down your whole app):
-
-    final ga = new GoogleAnalytics(failSilently: true);
-
 Use the instance to send data:
 
     ga.sendPageView();
@@ -41,6 +36,38 @@ documentation.
 
 [ga_docs]: https://developers.google.com/analytics/devguides/collection/gtagjs/events
 [gtag]: https://support.google.com/analytics/answer/7476135
+
+### Only throwing in development, not in production
+
+While analytics is important, you probably don't want it to break your whole
+app when something is wrong in the measurement code. And since calling out to
+`gtag` can go wrong for a number of reasons (forgotten tracking snippet
+in HTML, gtag not in time, etc.), this package provides a "keep on trucking"
+mode.
+
+You can ignore errors by constructing the `GoogleAnalytics` class like this:
+
+    final ga = new GoogleAnalytics(failSilently: true);
+
+The more realistic approach is to use an environment variable to switch this
+behavior on and off depending on whether the code is running in development or
+in production mode:
+
+    final inProduction =
+          const String.fromEnvironment("production") == "true";
+    final ga = new GoogleAnalytics(failSilently: inProduction);
+
+Then make sure you're building your production code with `production=true`,
+like this:
+
+    pub build --define production=true
+
+You could also go the other way around, and use something like 
+`development=true`. That way, you won't accidentally deploy a version that fails
+on Google Analytics when you forget to provide the `production=true` option
+on `pub build`. 
+(On the other hand, you might unknowingly be ignoring a valid error when you
+forget to provide the `development=true` option in development on `pub serve`.)
 
 ## Testing
 

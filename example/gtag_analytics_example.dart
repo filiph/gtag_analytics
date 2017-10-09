@@ -4,6 +4,8 @@
 import 'package:gtag_analytics/gtag_analytics.dart';
 
 void main() {
-  final ga = new GoogleAnalytics();
+  final inProduction =
+      const String.fromEnvironment("production") == "true";
+  final ga = new GoogleAnalytics(failSilently: inProduction);
   ga.sendCustom("choose_action", category: "play");
 }
