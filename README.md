@@ -35,6 +35,10 @@ Use the instance to send data:
     ga.sendSignUp(method: "email");
     ga.sendCustom("play_video");
 
+[Read more][ga_docs] about these events and their fields in the official 
+documentation.
+
+[ga_docs]: https://developers.google.com/analytics/devguides/collection/gtagjs/events
 [gtag]: https://support.google.com/analytics/answer/7476135
 
 ## Testing
