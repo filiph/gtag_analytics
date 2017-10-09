@@ -42,8 +42,8 @@ documentation.
 While analytics is important, you probably don't want it to break your whole
 app when something is wrong in the measurement code. And since calling out to
 `gtag` can go wrong for a number of reasons (forgotten tracking snippet
-in HTML, gtag not in time, etc.), this package provides a "keep on trucking"
-mode.
+in HTML, gtag not defined in time, etc.), this package provides 
+a "keep on trucking" mode.
 
 You can ignore errors by constructing the `GoogleAnalytics` class like this:
 
