@@ -7,13 +7,13 @@ A library for Google Analytics tracking through the `gtag` function.
 [Add the `gtag` Google Analytics tracking code][gtag] to your HTML:
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123456-42"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
   
-      gtag('config', 'UA-123456-42');
+      gtag('config', 'GA_TRACKING_ID');
     </script>
 
 In Dart, import this package.
@@ -24,7 +24,8 @@ Create an instance of the `GoogleAnalytics` class:
     
     final ga = new GoogleAnalytics();
 
-Or, if you want to ignore errors:
+Or, if you want to ignore errors (to ensure that your tracking code doesn't 
+bring down your whole app):
 
     final ga = new GoogleAnalytics(failSilently: true);
 
