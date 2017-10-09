@@ -19,11 +19,11 @@ A library for Google Analytics tracking through the `gtag` function.
 In Dart, import this package.
 
     import 'package:gtag_analytics/gtag_analytics.dart';
-    
+
 Create an instance of the `GoogleAnalytics` class:
     
     final ga = new GoogleAnalytics();
-    
+
 Or, if you want to ignore errors:
 
     final ga = new GoogleAnalytics(failSilently: true);

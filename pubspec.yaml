@@ -1,6 +1,6 @@
 name: gtag_analytics
 description: A minimal Google Analytics interop library.
-version: 0.1.2
+version: 0.1.3
 homepage: https://github.com/filiph/gtag_analytics
 author: Filip Hracek <filip.hracek@gmail.com>
 
