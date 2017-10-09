@@ -1,6 +1,6 @@
 // Copyright (c) 2017, filiph. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
-library gtag_analytics;
+library gtag_analytics.google_analytics;
 
 import 'package:meta/meta.dart';
 
