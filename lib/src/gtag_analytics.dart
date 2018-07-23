@@ -42,7 +42,7 @@ class GoogleAnalytics {
   }
 
   /// Send an exception to Google Analytics.
-  void sendException(String description, {@required bool fatal: true}) {
+  void sendException(String description, {@required bool fatal}) {
     _sendEvent(
         "exception", new Options(description: description, fatal: fatal));
   }
