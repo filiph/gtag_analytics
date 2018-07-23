@@ -1,5 +1,7 @@
 # gtag_analytics
 
+[![Build Status](https://travis-ci.org/filiph/gtag_analytics.svg?branch=master)](https://travis-ci.org/filiph/gtag_analytics)
+
 A library for Google Analytics tracking through the `gtag` function.
 
 ## Usage
