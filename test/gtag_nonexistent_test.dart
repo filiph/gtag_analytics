@@ -19,16 +19,16 @@ void main() {
       });
 
       test('send exception', () {
-        expect(() => ga.sendException("description", fatal: true),
+        expect(() => ga.sendException('description', fatal: true),
             throwsStateError);
       });
 
       test('send signup', () {
-        expect(() => ga.sendSignUp(method: "email"), throwsStateError);
+        expect(() => ga.sendSignUp(method: 'email'), throwsStateError);
       });
 
       test('send custom', () {
-        expect(() => ga.sendCustom("play_video"), throwsStateError);
+        expect(() => ga.sendCustom('play_video'), throwsStateError);
       });
     });
 
@@ -44,16 +44,16 @@ void main() {
       });
 
       test('send exception', () {
-        expect(() => ga.sendException("description", fatal: true),
+        expect(() => ga.sendException('description', fatal: true),
             returnsNormally);
       });
 
       test('send signup', () {
-        expect(() => ga.sendSignUp(method: "email"), returnsNormally);
+        expect(() => ga.sendSignUp(method: 'email'), returnsNormally);
       });
 
       test('send custom', () {
-        expect(() => ga.sendCustom("play_video"), returnsNormally);
+        expect(() => ga.sendCustom('play_video'), returnsNormally);
       });
     });
   });

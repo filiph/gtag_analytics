@@ -19,15 +19,15 @@ void main() {
 
     test('send exception', () {
       expect(
-          () => ga.sendException("description", fatal: true), returnsNormally);
+          () => ga.sendException('description', fatal: true), returnsNormally);
     });
 
     test('send signup', () {
-      expect(() => ga.sendSignUp(method: "email"), returnsNormally);
+      expect(() => ga.sendSignUp(method: 'email'), returnsNormally);
     });
 
     test('send custom', () {
-      expect(() => ga.sendCustom("play_video"), returnsNormally);
+      expect(() => ga.sendCustom('play_video'), returnsNormally);
     });
   });
 }

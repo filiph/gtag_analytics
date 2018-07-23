@@ -8,7 +8,7 @@ import 'interop.dart';
 
 /// Class encapsulating the methods for sending data to Analytics.
 class GoogleAnalytics {
-  static const String _event = "event";
+  static const String _event = 'event';
 
   static final Options _empty = new Options();
 
@@ -44,18 +44,18 @@ class GoogleAnalytics {
   /// Send an exception to Google Analytics.
   void sendException(String description, {@required bool fatal}) {
     _sendEvent(
-        "exception", new Options(description: description, fatal: fatal));
+        'exception', new Options(description: description, fatal: fatal));
   }
 
   /// Send a page view.
   void sendPageView() {
-    _sendEvent("page_view", _empty);
+    _sendEvent('page_view', _empty);
   }
 
-  /// Send a sign up event, with method (such as "Facebook", "email", or
-  /// "Google".
-  void sendSignUp({String method: "N/A"}) {
-    _sendEvent("sign_up", new Options(method: method));
+  /// Send a sign up event, with method (such as 'Facebook', 'email', or
+  /// 'Google'.
+  void sendSignUp({String method: 'N/A'}) {
+    _sendEvent('sign_up', new Options(method: method));
   }
 
   /// The method doing the actual sending. Catches and discards the error
@@ -66,8 +66,8 @@ class GoogleAnalytics {
     // ignore: avoid_catching_errors
     } on NoSuchMethodError catch (e) {
       if (!failSilently) {
-        throw new StateError("gtag function not found. Please make sure you "
-            "include the Google Analytics script in your HTML. ($e)");
+        throw new StateError('gtag function not found. Please make sure you '
+            'include the Google Analytics script in your HTML. ($e)');
       }
     }
   }
