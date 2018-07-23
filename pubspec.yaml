@@ -1,6 +1,8 @@
 name: gtag_analytics
-description: A minimal Google Analytics interop library.
-version: 0.1.7+1
+description: >
+  A minimal Google Analytics interop library. Allows triggering page views
+  and other events from Dart code.
+version: 0.1.7+2
 homepage: https://github.com/filiph/gtag_analytics
 author: Filip Hracek <filip.hracek@gmail.com>
 

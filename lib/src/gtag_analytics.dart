@@ -63,7 +63,7 @@ class GoogleAnalytics {
   void _sendEvent(String eventName, Options options) {
     try {
       gtag(_event, eventName, options);
-    // ignore: avoid_catching_errors
+      // ignore: avoid_catching_errors
     } on NoSuchMethodError catch (e) {
       if (!failSilently) {
         throw new StateError('gtag function not found. Please make sure you '
